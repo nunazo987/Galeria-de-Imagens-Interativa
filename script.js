@@ -5,16 +5,25 @@ const btnFechar = document.querySelector(".fechar");
 
 //codigo para maximizar as imagens
 
-galeria.addEventListener("click", (e) => {
-    // if (e.target.tagName === "IMG") {
-    //     modal.style.display = "flex";
-    //     const imagemSource = e.target.Attribute("src");
-    //     modalImagem.src = imagemSource;
-    console.log(`Clickado`);
+ galeria.addEventListener("click", (e) => {      //event para quando clickar dentro da galeria 
+    if (e.target.tagName === "IMG") {            //SE target do event tiver tag === IMG
+        modal.style.display = "flex";                //modal usa o flex 
+        const imgSource = e.target.getAttribute("src"); //target do event (click) vai buscar o source da imagem e da a const
+        modalImg.src = imgSource; //atribui a source dada a const ao modal
     }
-);
+});
 
-//perceber pq e q na consola no Inspect no html so regista quando clicko nas imagens (tipo esta bem
-//mas em teoria devia registar quando clicko na 'galeria toda' e so dps e que deveria registar quando clico nas imagens - mais a frente no codigo)
+modal.addEventListener("click", (e) => { //funcao para fechar o modal ao clickar
+    modal.style.display = "none";
+});
+
+btnFechar.addEventListener("click", (e) => {
+    modal.style.display = "none";
+});
+
+modalImg.addEventListener("click", (e) => {
+    e.stopPropagation();
+});
+
 
 

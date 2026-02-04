@@ -1,9 +1,9 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
+} */
 
 body {
   background-color: #f4f6f8;
@@ -13,13 +13,17 @@ body {
 
 .galeria-imagens {
     display: flex;
-    gap: 16px; 
+    gap: 40px; 
+    width: 900px;
+    margin: 0 auto;
 }
 
 .galeria-imagens img {
     width: 100%;
     height: 200px;       
     object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
 }
 
 .foto {
@@ -42,4 +46,16 @@ body {
 .modal-content img {
     max-width: 90vw;
     max-height: 90vh;
+}
+
+.fechar {
+    position: absolute; 
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+}
+
+.galeria-imagens img:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
 }

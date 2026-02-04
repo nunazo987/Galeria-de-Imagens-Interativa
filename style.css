@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  padding: 40px;
+  color: #333;
+}
+
+.galeria-imagens {
+    display: flex;
+    gap: 16px; 
+}
+
+.galeria-imagens img {
+    width: 100%;
+    height: 200px;       
+    object-fit: cover;
+}
+
+.foto {
+    flex: 1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content img {
+    max-width: 90vw;
+    max-height: 90vh;
+}
